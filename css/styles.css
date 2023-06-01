@@ -119,8 +119,9 @@ body {
   width: 100%;
   height: 4px;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   background-color: var(--accent-color);
+  border-radius: 2px;
 }
 .adresses {
   font-style: normal;
@@ -200,6 +201,8 @@ body {
   padding-bottom: 16px;
   padding-left: 32px;
   padding-right: 32px;
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -322,7 +325,8 @@ body {
   background-color: #4d5ae5;
   align-items: center;
   justify-content: center;
-  transition: color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 .social-icon {
   fill: var(--background-color-icons);
@@ -358,7 +362,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #8e8f99;
-  transition: border var(--transition-duration)
+  transition: border-color var(--transition-duration)
       var(--transition-timing-function),
     color var(--transition-duration) var(--transition-timing-function);
 }
@@ -447,7 +451,8 @@ body {
   background-color: var(--secondary-background-color-icons);
   align-items: center;
   justify-content: center;
-  transition: color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
@@ -487,7 +492,10 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px 12px 24px;
-  transition: color var(--transition-duration) var(--transition-timing-function);
+  transition: background-color var(--transition-duration)
+      var(--transition-timing-function),
+    border-color var(--transition-duration) var(--transition-timing-function),
+    box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 
 .menu-btn:hover,
@@ -518,6 +526,10 @@ body {
   position: relative;
   overflow: hidden;
 }
+.picture-link {
+  transition: box-shadow var(--transition-duration)
+    var(--transition-timing-function);
+}
 
 .picture-link:hover,
 .picture-link:focus {
@@ -531,10 +543,7 @@ body {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   background-color: var(--secondary-background-color-icons);
-  padding-top: 40px;
-  padding-bottom: 164px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding: 40px 32px;
   width: 100%;
   height: 100%;
 
@@ -587,11 +596,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: transform var(--transition-duration)
+    var(--transition-timing-function);
 }
 .modal-close-btn {
   position: absolute;
@@ -607,6 +618,21 @@ body {
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
+  cursor: pointer;
+  transition: background-color var(--transition-duration)
+      var(--transition-timing-function),
+    border var(--transition-duration) var(--transition-timing-function);
 }
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: var(--accent-color);
+  border: none;
+}
+
 .modal-close-btn-icon {
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+}
+.modal-close-btn.modal-close-btn-icon:hover,
+.modal-close-btn.modal-close-btn-icon:focus {
+  fill: var(--background-color);
 }
