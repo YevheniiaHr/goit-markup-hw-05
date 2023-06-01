@@ -492,7 +492,8 @@ body {
   border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px 12px 24px;
-  transition: background-color var(--transition-duration)
+  transition: color var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration)
       var(--transition-timing-function),
     border-color var(--transition-duration) var(--transition-timing-function),
     box-shadow var(--transition-duration) var(--transition-timing-function);
@@ -625,14 +626,10 @@ body {
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  background-color: var(--accent-color);
+  fill: var(--background-color);
   border: none;
 }
 
 .modal-close-btn-icon {
   transition: fill var(--transition-duration) var(--transition-timing-function);
-}
-.modal-close-btn.modal-close-btn-icon:hover,
-.modal-close-btn.modal-close-btn-icon:focus {
-  fill: var(--background-color);
 }
