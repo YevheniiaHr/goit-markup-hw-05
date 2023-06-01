@@ -626,6 +626,7 @@ body {
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
+  background-color: var(--hover-color);
   fill: var(--background-color);
   border: none;
 }
