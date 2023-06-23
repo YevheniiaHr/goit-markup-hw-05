@@ -350,7 +350,7 @@ body {
   margin-top: 72px;
 }
 .customers-list-item {
-  width: calc((100%-120px) / 6);
+  width: calc((100% - 120px) / 6);
   height: 88px;
 }
 .customers-list-item-link {
